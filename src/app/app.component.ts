@@ -7,4 +7,10 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
+
+  baris = 5;
+  kolom = 5;
+
+
+
 }
