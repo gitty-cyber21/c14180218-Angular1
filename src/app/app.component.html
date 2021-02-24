@@ -1,13 +1,14 @@
-<hello name="{{ name }}"></hello>
+<h1>Tugas Angular 1</h1>
+<p [innerHTML]="jawaban"></p>
 <p>
-  Start editing to see some magic happen :)
   <br/>
-  <br/>
-  Player 1: 
+  Input : 
    <input type="text" [(ngModel)]= "baris"/>
     <input type="text" [(ngModel)]= "kolom"/>
+    <br/>
+    <br/>
+    Baris: {{baris}}<br/>
+    Kolom: {{kolom}}
 </p>
 
-<div *ngFor="let b of baris, let i = index ">
-
-</div>
+<button (click)="DONE()">DONE</button>

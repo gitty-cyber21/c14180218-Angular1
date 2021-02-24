@@ -7,10 +7,13 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
+  jawaban: String = "*****<br>*****<br>*****<br>*****<br>*****";
 
-  baris = 5;
-  kolom = 5;
+  baris = 0;
+  kolom = 0;
 
-
+  DONE(){
+      
+  }
 
 }
