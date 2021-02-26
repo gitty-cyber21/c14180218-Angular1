@@ -9,14 +9,22 @@ export class AppComponent  {
   name = 'Angular ' + VERSION.major;
   output: String = "*****<br>*****<br>*****<br>*****<br>*****";
   player : String = "Player 1";
+  input : String;
 
   pemenang : String;
 
-  baris = 0;
-  kolom = 0;
+  
 
   DONE(){
       var pisah = this.output.split("<br>");
+
+      var win = "0";
+
+      var convert = new Array()
+
+      var inputsplit = this.input.split(",")
+      var bar = parseInt(inputsplit[0]);
+      var kol = parseInt(inputsplit[1]);
 
       var plr = this.player.split(" ");
       var player = plr[1];
@@ -27,11 +35,8 @@ export class AppComponent  {
         arr[i] = pisah[i].split("");
       }
 
-      arr[this.baris - 1][this.kolom-1] = player;
+      arr[bar - 1][kol-1] = player;
 
-      var win = "0";
-
-      var convert = new Array()
 
       for(var i = 0; i < 5-1; i++){
         arr[i].push("<br>");
