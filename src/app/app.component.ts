@@ -13,7 +13,11 @@ export class AppComponent  {
 
   pemenang : String;
 
-  
+  cetak(){
+    for(var i = 0; i < 5 ; i++){
+      
+    }
+  }
 
   DONE(){
       var pisah = this.output.split("<br>");
@@ -36,6 +40,7 @@ export class AppComponent  {
       }
 
       arr[bar - 1][kol-1] = player;
+      
 
 
       for(var i = 0; i < 5-1; i++){
