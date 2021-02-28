@@ -1,5 +1,7 @@
 <h1>Tugas Angular 1</h1>
 
-<ng-container *ngFor="let a of output; let i= index">
-{{a}}
+<ng-container *ngFor="let a of output; let i = index">
+<ng-container *ngFor="let b of a; let j = index">
+{{b}}
+</ng-container>
 </ng-container>
