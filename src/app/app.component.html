@@ -1,15 +1,5 @@
 <h1>Tugas Angular 1</h1>
-<p [innerHTML]="output"></p>
-<p>{{player}}</p>
-<p>
-  
-  <br/>
-  Input : 
-   <input type="text" [(ngModel)]= "input"/>
-    <br/>
-    <br/>
-</p>
 
-<button (click)="DONE()">DONE</button>
-
-<p>{{pemenang}}</p>
+<ng-container *ngFor="let a of output; let i= index">
+{{a}}
+</ng-container>
