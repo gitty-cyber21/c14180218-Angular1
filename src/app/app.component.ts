@@ -18,10 +18,20 @@ export class AppComponent  {
      
     for(var i : number = 0; i < 5; i++) {
             for(var j : number = 0; j < 5; j++) {
-                this.output[i][j] = "*";
+                if(this.baris == i && this.baris == j){
+                  this.output[i][j] = "1";
+                }
+                else{
+                  this.output[i][j] = "*";
+                }
             }
         }
-      
+
+      for(var i : number = 0; i < 5; i++) {
+            for(var j : number = 0; j < 5; j++) {
+                this.output[i][j];
+            }
+        }
       
 
   }
