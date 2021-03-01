@@ -12,17 +12,15 @@ export class AppComponent  {
 
   pemenang : String;
 
-  constructor(){
-      for(var i : number = 0; i < 5; i++) {
+  
+
+  DONE(){
+     
+    for(var i : number = 0; i < 5; i++) {
             for(var j : number = 0; j < 5; j++) {
                 this.output[i][j] = "*";
             }
         }
-  }
-
-  DONE(){
-     
-
       
       
 
