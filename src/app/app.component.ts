@@ -12,23 +12,28 @@ export class AppComponent  {
 
   pemenang : String;
 
+  constructor() {
+    this.output = [];
+    for(var i = 0; i < 5; i++) {
+      this.output[i] = [];
+      for(var j = 0; j < 5; j++) {
+        this.output[i][j] = "*";
+      }
+    }
+  }
   
 
   DONE(){
      
-    for(var i : number = 0; i < 5; i++) {
-            for(var j : number = 0; j < 5; j++) {
-                if(this.baris == i && this.baris == j){
-                  this.output[i][j] = "1";
-                }
-                else{
-                  this.output[i][j] = "*";
+    for(var i : number = 1; i <= 5; i++) {
+            for(var j : number = 1; j <= 5; j++) {
+                if(this.baris == i && this.kolom == j){
+                  this.output[i][j] = "1";         
                 }
             }
         }
-
-      for(var i : number = 0; i < 5; i++) {
-            for(var j : number = 0; j < 5; j++) {
+      for(var i : number = 0; i <= 5; i++) {
+            for(var j : number = 0; j <= 5; j++) {
                 this.output[i][j];
             }
         }

@@ -1,9 +1,8 @@
 <h1>Tugas Angular 1</h1>
 
 <ng-container *ngFor="let a of output; let i = index">
-<ng-container *ngFor="let b of a; let j = index">
-{{b}}
-</ng-container>
+{{a}}
+<br>
 </ng-container>
 
 <p>Input Player 1:<br/><br/> 
@@ -13,4 +12,3 @@
 
 <button (click)="DONE()">DONE</button>
 
-{{output}}
