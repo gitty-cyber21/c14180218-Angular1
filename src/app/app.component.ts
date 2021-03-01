@@ -9,6 +9,10 @@ export class AppComponent  {
   output : String[][];
   baris: 0;
   kolom: 0;
+  turn = "1";
+  winner : String;
+
+  
 
   pemenang : String;
 
@@ -25,19 +29,52 @@ export class AppComponent  {
 
   DONE(){
      
-    for(var i : number = 1; i <= 5; i++) {
-            for(var j : number = 1; j <= 5; j++) {
-                if(this.baris == i && this.kolom == j){
-                  this.output[i][j] = "1";         
-                }
-            }
+     var win = "belum";
+     var cnt = 0;
+
+    this.output[this.baris][this.kolom] = this.turn;
+
+    //horizontal check
+     for (var i = 0; i < 5; i++) {
+      cnt = 0;
+      for (var j = 0; j < 5; j++) {
+        if (this.output[i][j] == this.turn) {
+          cnt++;
+        } else {
+          cnt = 0;
         }
-      for(var i : number = 0; i <= 5; i++) {
-            for(var j : number = 0; j <= 5; j++) {
-                this.output[i][j];
-            }
+      }
+      if (cnt >= 4) {
+        win = this.turn;
+      }
+    }
+
+     if (win == "belum") {
+      for (var i = 0; i < 5; i++) {
+        cnt = 0;
+        for (var j = 0; j < 5; j++) {
+          if (this.output[j][i] == this.turn) {
+            cnt++;
+          } else {
+            cnt = 0;
+          }
         }
-      
+        if (cnt >= 4) {
+          win = this.turn;
+        }
+      }
+    }
+    
+    if(win != "belum"){
+      this.winner = "Pemenangnya adalah Player" + this.turn;
+    }
+
+    if(this.turn == "1"){
+      this.turn = "2";
+    }
+    else{
+      this.turn = "1";
+    }
 
   }
 
