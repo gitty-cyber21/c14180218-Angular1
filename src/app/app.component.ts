@@ -35,12 +35,10 @@ export class AppComponent  {
      for (var i = 0; i < 5; i++) {
       cnt = 0;
       for (var j = 0; j < 5; j++) {
-        if (this.output[i][j] == this.turn) {
+        if (this.output[this.baris - 1][j] == this.turn) {
           cnt++;
-          alert(cnt);
-        } else {
-          cnt = 0;
         }
+          i++;
       }
       if (cnt >= 4) {
         win = this.turn;
@@ -53,11 +51,10 @@ export class AppComponent  {
       for (var i = 0; i < 5; i++) {
         cnt = 0;
         for (var j = 0; j < 5; j++) {
-          if (this.output[i][j] == this.turn) {
+          if (this.output[i][this.kolom-1] == this.turn) {
             cnt++;
-          } else {
-            cnt = 0;
           }
+            i++;
         }
         if (cnt >= 4) {
           win = this.turn;
