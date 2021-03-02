@@ -37,6 +37,7 @@ export class AppComponent  {
       for (var j = 0; j < 5; j++) {
         if (this.output[i][j] == this.turn) {
           cnt++;
+          alert(cnt);
         } else {
           cnt = 0;
         }
@@ -64,7 +65,7 @@ export class AppComponent  {
       }
     }
     
-    if(win != "belum"){
+    if(win == this.turn){
       this.winner = "Pemenangnya adalah Player" + this.turn;
     }
     else {
