@@ -53,7 +53,7 @@ export class AppComponent  {
       for (var i = 0; i < 5; i++) {
         cnt = 0;
         for (var j = 0; j < 5; j++) {
-          if (this.output[j][i] == this.turn) {
+          if (this.output[i][j] == this.turn) {
             cnt++;
           } else {
             cnt = 0;
