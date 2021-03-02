@@ -7,8 +7,8 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   output : String[][];
-  baris: 0;
-  kolom: 0;
+  baris = 0;
+  kolom = 0;
   turn = "1";
   winner : String;
 
