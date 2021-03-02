@@ -49,6 +49,8 @@ export class AppComponent  {
       }
     }
 
+    //vertical check
+
      if (win == "belum") {
       for (var i = 0; i < 5; i++) {
         cnt = 0;
