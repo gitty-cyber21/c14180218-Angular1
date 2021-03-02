@@ -67,13 +67,15 @@ export class AppComponent  {
     if(win != "belum"){
       this.winner = "Pemenangnya adalah Player" + this.turn;
     }
-
-    if(this.turn == "1"){
+    else {
+      if(this.turn == "1"){
       this.turn = "2";
     }
     else{
       this.turn = "1";
     }
+    }
+    
 
   }
 
