@@ -12,10 +12,6 @@ export class AppComponent  {
   turn = "1";
   winner : String;
 
-  
-
-  pemenang : String;
-
   constructor() {
     this.output = [];
     for(var i = 0; i < 5; i++) {
@@ -32,8 +28,9 @@ export class AppComponent  {
      var win = "belum";
      var cnt = 0;
 
-    this.output[this.baris][this.kolom] = this.turn;
+    this.output[this.baris - 1][this.kolom - 1] = this.turn;
 
+    
     //horizontal check
      for (var i = 0; i < 5; i++) {
       cnt = 0;
