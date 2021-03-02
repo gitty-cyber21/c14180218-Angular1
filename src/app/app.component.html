@@ -1,7 +1,9 @@
 <h1>Tugas Angular 1</h1>
 
 <label *ngFor="let a of output; let i = index">
-	{{a}}
+  <label *ngFor="let b of output; let j = index">
+	{{output[i][j]}}
+</label>
 	<br>
 </label>
 
